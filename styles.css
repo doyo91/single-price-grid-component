@@ -15,8 +15,6 @@
 
   --clr-gray: hsl(204, 43%, 93%);
   --clr-blue: hsl(218, 22%, 67%);
-
-  --break-point: 1024px;
 }
 
 html,
@@ -34,6 +32,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 article {
   display: grid;
@@ -84,7 +83,7 @@ p {
 
 .header__subtitle {
   color: var(--clr-primary-yellow);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
@@ -153,3 +152,22 @@ p {
   padding: 0.2rem;
 }
 /* END Section 3 */
+
+@media screen and (min-width: 768px) {
+  main {
+    height: 100vh;
+  }
+  article {
+    width: 65rem;
+    height: 45rem;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1rem;
+  }
+  section {
+    padding: 3rem;
+  }
+
+  .header {
+    grid-column: 1 / 3;
+  }
+}
